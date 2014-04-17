@@ -1,0 +1,14 @@
+.cf:after {
+	content:"";
+	clear:both;
+	display: table;
+}
+@import "sprite";
+@import "header";
+@import "footer";
+@import "navigation";
+@import "slider";
+@import "tabs";
+@import "buttons";
+@import "main";
+

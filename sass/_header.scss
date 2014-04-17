@@ -1,0 +1,33 @@
+.header {
+	max-width: 980px;
+	margin:0 auto;
+	.logo {
+		float:left;
+		margin-top:5px;
+	}
+	.tel {
+		font-weight:900;
+		font-size:28px;
+		float:left;
+		margin-left:20px;
+	}
+	nav {
+		font-size:15px;
+		line-height: 15px;
+		text-transform: uppercase;
+		float:left;
+		margin-left:20px;
+		@extend .cf;
+		a {
+			display: block;
+			float:left;
+			padding:15px 10px;
+			margin-left:5px;
+			text-decoration: none;
+			color:#444;
+			&:hover, &.active {
+				background: #1bbc9b;
+			}
+		}
+	}
+}

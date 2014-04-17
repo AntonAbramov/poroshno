@@ -1,0 +1,34 @@
+.footer {
+	max-width: 980px;
+	margin:0 auto;
+	.contacts {
+		background: #ecf0f1;
+		padding:30px 20px 20px;
+		font-size:20px;
+		@extend .cf;
+		.adress {
+			margin-right:20px;
+			float:left;
+		}
+		.tel {
+			float:left;
+			margin-right:20px;
+		}
+		.contact {
+			float:right;
+			text-transform: uppercase;
+		}
+		.icons-phone {
+			position:relative;
+			top:5px;
+			margin-right:5px;
+		}
+	}
+	.copyright {
+		background:#2d3e50;
+		padding:5px 20px;
+		color:#fff;
+		font-size: 14px;
+		line-height:20px;
+	}
+}
