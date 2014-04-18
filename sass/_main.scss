@@ -3,6 +3,7 @@ body {
 	font-size: 14px;
 	line-height: 20px;
 	color:#444;
+	padding-top:100px;
 }
 
 .body {
@@ -71,11 +72,12 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 h3.heading-green-bg {
-	padding:5px 40px;
+	padding:10px 40px 5px;
 	background: #16a086;
 	color:#fff;
 	font-size: 30px;
-	font-weight: 700;
+	font-weight: 400;
+	text-transform: uppercase;
 }
 .why-we {
 	padding-top:10px;
@@ -94,17 +96,51 @@ h3.heading-green-bg {
 			color:#16a086;
 			font-style:italic;
 			text-decoration: none;
+			position:relative;
 			.icon {
 				position:absolute;
 				left:0;
 				bottom:0;
 			}
+			&:hover {
+				.tooltip-popup {
+					display: block;
+				}
+			}
+		}
+	}
+	.tooltip-popup {
+		padding:10px;
+		background: #fff;
+		border:4px solid #16a086;
+		border-radius: 20px;
+		font-style: italic;
+		box-shadow:8px 5px 8px rgba(0,0,0,.75);
+		width:290px;
+		display: block;
+		position:absolute;
+		bottom:80px;
+		color:#444;
+		font-size:14px;
+		display: none;
+		left:0;
+		z-index: 2;
+		&:after {
+			content:"";
+			width:73px;
+			height:66px;
+			background: url(../img/corner.png) no-repeat;
+			position:absolute;
+			bottom:-65px;
+			left:10px;
+			z-index: 2;
 		}
 	}
 }
 .gen-plan {
 	h3 {
-		border-top:4px solid #1bbc9b;
+		background:url(../img/border.png) no-repeat;
+		padding-top:5px;
 		color:#16a086;
 		text-transform: uppercase;
 		font-size: 30px;
@@ -113,7 +149,157 @@ h3.heading-green-bg {
 	}
 }
 .map-container {
+	background:url(../img/border.png) 0 100% no-repeat;
+	padding-bottom:2px;
 	h3 {
 		margin:0;
 	}
+}
+.red-bg-heading {
+	background: #f96668;
+	padding:5px 20px 5px 40px;
+	color:#fff;
+	font-weight: 100;
+	text-transform: uppercase;
+	font-size: 30px;
+	margin:0 0 20px;
+}
+.hot-proposition {
+	padding:10px;
+	.side {
+		float:left;
+		width:50%;
+		padding:0 10px;
+	}
+	.picture-preview {
+		float:left;
+		margin-bottom:15px;
+		margin-right: 20px;
+		&:hover {
+			box-shadow:0 0 2px 1px #1bbc9b;
+		}
+		img {
+			display:block;
+			max-width: 100%;
+		}
+	}
+	.discribe {
+		margin:0 0 10px;
+		span {
+			margin-right:10px;
+			color:#16a086;
+			font-weight: 700;
+		}
+	}
+	.price {
+		span {
+			padding:10px 20px;
+			color:#fff;
+			font-weight: 700;
+			background: #1bbc9b;
+			float:right;
+		}
+	}
+}
+
+.top-big-picture {
+	position:relative;
+	background:url(../img/border.png) no-repeat 0 0;
+	background: url(../img/slide1.jpg) no-repeat 50% 0;
+	.inn {
+		width:980px;
+		margin:0 auto;
+		height:450px;
+	}
+	.apply {
+		float:right;
+		width:350px;
+		box-shadow:0 0 5px rgba(0,0,0, .5);
+		margin-top:15px;
+		background: rgba(255,255,255, .9);
+		padding:15px 0;
+		.heading {
+			padding:0 30px 20px;
+			border-bottom:1px solid #d1d3d1;
+			margin-bottom:20px;
+			font-size: 24px;
+			text-transform: uppercase;
+		}
+		.container {
+			padding:0 30px;
+		}
+		.field {
+			margin:0 0 10px;
+			position:relative;
+			&:after {
+				content:"";
+				width:21px;
+				height:22px;
+				top:22px;
+				right:10px;
+				position:absolute;
+				z-index: 2;
+				@include icons-sprite(good);
+			}
+			&.error {
+				&:after {
+					@include icons-sprite(error);
+				}
+				input {
+					color:#f96668;
+					border-color:#f96668;
+					box-shadow:0 0 1px #f96668;
+				}
+
+			}
+			.required-field {
+				font-size:8px;
+				line-height: 10px;
+				display:block;
+				color:#8d8d8d;
+				margin-bottom: 3px;
+			}
+			input {
+				background: #f4f4f4;
+				border-radius: 3px;
+				display:block;
+				width:100%;
+				height:40px;
+				padding:10px 40px 10px 20px;
+				color:#8d8d8d;
+				border:1px solid #1c1f19;
+				box-shadow:0 0 1px #1c1f19;
+				font-size:14px;
+				line-height:20px;
+				position:relative;
+				&:focus {
+					outline: none;
+				}
+			}
+
+
+		}
+		.submit-btn {
+			text-align: center;
+			margin:20px 0 20px;
+			button, input {
+				display:inline-blcok;
+				cursor: pointer;
+				color:#ffffff;
+				border:none;
+				background: #f96668;
+				font-weight: 700;
+				padding:8px 20px 12px;
+				box-shadow:0 -5px 0 rgba(0,0,0, .1) inset;
+			}
+		}
+		.bottom-text {
+			font-size:10px;
+			line-height: 14px;
+			color:#8d8d8d;
+		}
+	}
+}
+.tooltip-popup {
+
 }
