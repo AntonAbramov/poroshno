@@ -21,6 +21,19 @@ $(window).resize(function(){
 });
 
 $(window).load(function () {
+        /**
+         * Set theme and captions
+         */
+//        $('#countdown').timeTo(100, function(){ alert('Countdown finished'); });
+        $('#countdown').timeTo({
+            timeTo: new Date(new Date('Mon Apr 27 2014 09:00:00 GMT+0300 (EEST)')),
+            displayDays: 2,
+            theme: "black",
+            displayCaptions: true,
+            fontSize: 48,
+            captionSize: 14
+        });
+
 
 });
 
