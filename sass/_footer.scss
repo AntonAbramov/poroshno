@@ -9,6 +9,8 @@
 		.adress {
 			margin-right:20px;
 			float:left;
+			max-width: 590px;
+			line-height: 22px;
 		}
 		.tel {
 			float:left;
@@ -17,6 +19,8 @@
 		.contact {
 			float:right;
 			text-transform: uppercase;
+			position: relative;
+			top: 5px;
 		}
 		.icons-phone {
 			position:relative;

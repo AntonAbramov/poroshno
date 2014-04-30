@@ -1,21 +1,23 @@
 $(document).ready(function () {
-	var myMap;
-
-	time();
-
-	// Дождёмся загрузки API и готовности DOM.
 	ymaps.ready(init);
+        var myMap,
+            myPlacemark;
 
-	function init () {
-	    // Создание экземпляра карты и его привязка к контейнеру с
-	    // заданным id ("map").
-	    myMap = new ymaps.Map('map', {
-	        // При инициализации карты обязательно нужно указать
-	        // её центр и коэффициент масштабирования.
-	        center:[55.76, 37.64], // Москва
-	        zoom:10
-	    });
-	}
+        function init(){
+            myMap = new ymaps.Map("map", {
+                center: [58.615388,49.816377],
+                zoom: 10,
+	            controls: ["default","routeEditor"]
+            });
+			myMap.controls.add('typeSelector');
+			myMap.controls.add('zoomControl');
+            myPlacemark = new ymaps.Placemark([58.615388,49.816377], {
+                hintContent: 'Какой то город!',
+                balloonContent: 'Контент тестовый'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
 
 
 });
