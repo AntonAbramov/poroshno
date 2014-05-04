@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	time();
 	ymaps.ready(init);
         var myMap,
             myPlacemark;
@@ -34,7 +35,7 @@ $(window).load(function () {
 var time = function(){
 	if ($('#countdown').length) {
 		$('#countdown').timeTo({
-			timeTo: new Date(new Date('Mon Apr 27 2014 09:00:00 GMT+0300 (EEST)')),
+			timeTo: new Date(new Date('Mon May 27 2014 09:00:00 GMT+0300 (EEST)')),
 			displayDays: 2,
 			theme: "black",
 			displayCaptions: true,
