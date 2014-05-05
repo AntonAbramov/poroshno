@@ -129,30 +129,41 @@
   background: #fff;
 }
 /* line 8, ../sass/_header.scss */
+.header:before {
+  content: "";
+  width: 100%;
+  height: 34px;
+  background: url(../img/shadow.png) repeat-x;
+  top: 90px;
+  left: 0;
+  z-index: 10;
+  position: fixed;
+}
+/* line 18, ../sass/_header.scss */
 .header .inn {
   position: relative;
   width: 980px;
   margin: 0 auto;
 }
-/* line 13, ../sass/_header.scss */
+/* line 23, ../sass/_header.scss */
 .header .logo {
   float: left;
   margin-top: 5px;
 }
-/* line 17, ../sass/_header.scss */
+/* line 27, ../sass/_header.scss */
 .header .tel {
   font-weight: 900;
   font-size: 28px;
   float: left;
   margin-left: 20px;
 }
-/* line 22, ../sass/_header.scss */
+/* line 32, ../sass/_header.scss */
 .header .tel .icons-phone {
   position: relative;
   top: 5px;
   left: -5px;
 }
-/* line 28, ../sass/_header.scss */
+/* line 38, ../sass/_header.scss */
 .header nav {
   font-size: 15px;
   line-height: 15px;
@@ -160,7 +171,7 @@
   float: left;
   margin-left: 20px;
 }
-/* line 35, ../sass/_header.scss */
+/* line 45, ../sass/_header.scss */
 .header nav a {
   display: block;
   float: left;
@@ -169,7 +180,7 @@
   text-decoration: none;
   color: #444;
 }
-/* line 42, ../sass/_header.scss */
+/* line 52, ../sass/_header.scss */
 .header nav a:hover, .header nav a.active {
   background: #1bbc9b;
 }
